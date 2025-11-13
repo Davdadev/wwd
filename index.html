@@ -3,423 +3,341 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Word List (cleaned + dom words)</title>
+  <title>Word List - Only Words Containing "dom"</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 3px solid #4CAF50;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #666;
+      margin-top: 30px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .dom-highlight {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    .count {
+      color: #888;
+      font-size: 0.9em;
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Word List (cleaned + dom words)</h1>
+  <h1>Words Containing "dom"</h1>
+  <p class="count">Total words: <strong id="totalCount">0</strong></p>
 
   <h2>Previously cleaned words</h2>
   <ul>
-    <li>abdominal</li>
-    <li>abdomen</li>
-    <li>abdominals</li>
-    <li>abdomenizer</li>
-    <li>abdominohysterectomy</li>
-    <li>abdominoplasty</li>
-    <li>condom</li>
-    <li>condominium</li>
-    <li>condominiums</li>
-    <li>domestic</li>
-    <li>domesticity</li>
-    <li>domesticate</li>
-    <li>domesticated</li>
-    <li>domestically</li>
-    <li>domestication</li>
-    <li>domineer</li>
-    <li>domineering</li>
-    <li>domineeringly</li>
-    <li>domination</li>
-    <li>dominance</li>
-    <li>dominant</li>
-    <li>dominate</li>
-    <li>dominantly</li>
-    <li>dominion</li>
-    <li>domicile</li>
-    <li>domiciled</li>
-    <li>domiciles</li>
-    <li>domiciliary</li>
-    <li>domiciliate</li>
-    <li>domiciliation</li>
-    <li>kingdom</li>
-    <li>queendom</li>
-    <li>martyrdom</li>
-    <li>stardom</li>
-    <li>fandom</li>
-    <li>freedom</li>
-    <li>boredom</li>
-    <li>wisdom</li>
-    <li>seldom</li>
-    <li>random</li>
-    <li>randomize</li>
-    <li>randomization</li>
-    <li>randomised</li>
-    <li>randomized</li>
-    <li>randomness</li>
-    <li>randomly</li>
-    <li>randomizers</li>
-    <li>randomisations</li>
-    <li>pedometer</li>
-    <li>pedometers</li>
-    <li>odometer</li>
-    <li>odometers</li>
-    <li>speedometer</li>
-    <li>speedometers</li>
-    <li>majordomo</li>
-    <li>majordomos</li>
-    <li>princedom</li>
-    <li>princedoms</li>
-    <li>popedom</li>
-    <li>popedoms</li>
-    <li>domino</li>
-    <li>dominos</li>
+    <li>ab<span class="dom-highlight">dom</span>inal</li>
+    <li>ab<span class="dom-highlight">dom</span>en</li>
+    <li>ab<span class="dom-highlight">dom</span>inals</li>
+    <li>ab<span class="dom-highlight">dom</span>enizer</li>
+    <li>ab<span class="dom-highlight">dom</span>inohysterectomy</li>
+    <li>ab<span class="dom-highlight">dom</span>inoplasty</li>
+    <li>con<span class="dom-highlight">dom</span></li>
+    <li>con<span class="dom-highlight">dom</span>inium</li>
+    <li>con<span class="dom-highlight">dom</span>iniums</li>
+    <li><span class="dom-highlight">dom</span>estic</li>
+    <li><span class="dom-highlight">dom</span>esticity</li>
+    <li><span class="dom-highlight">dom</span>esticate</li>
+    <li><span class="dom-highlight">dom</span>esticated</li>
+    <li><span class="dom-highlight">dom</span>estically</li>
+    <li><span class="dom-highlight">dom</span>estication</li>
+    <li><span class="dom-highlight">dom</span>ineer</li>
+    <li><span class="dom-highlight">dom</span>ineering</li>
+    <li><span class="dom-highlight">dom</span>ineeringly</li>
+    <li><span class="dom-highlight">dom</span>ination</li>
+    <li><span class="dom-highlight">dom</span>inance</li>
+    <li><span class="dom-highlight">dom</span>inant</li>
+    <li><span class="dom-highlight">dom</span>inate</li>
+    <li><span class="dom-highlight">dom</span>inantly</li>
+    <li><span class="dom-highlight">dom</span>inion</li>
+    <li><span class="dom-highlight">dom</span>icile</li>
+    <li><span class="dom-highlight">dom</span>iciled</li>
+    <li><span class="dom-highlight">dom</span>iciles</li>
+    <li><span class="dom-highlight">dom</span>iciliary</li>
+    <li><span class="dom-highlight">dom</span>iciliate</li>
+    <li><span class="dom-highlight">dom</span>iciliation</li>
+    <li>king<span class="dom-highlight">dom</span></li>
+    <li>queen<span class="dom-highlight">dom</span></li>
+    <li>martyr<span class="dom-highlight">dom</span></li>
+    <li>star<span class="dom-highlight">dom</span></li>
+    <li>fan<span class="dom-highlight">dom</span></li>
+    <li>free<span class="dom-highlight">dom</span></li>
+    <li>bore<span class="dom-highlight">dom</span></li>
+    <li>wis<span class="dom-highlight">dom</span></li>
+    <li>sel<span class="dom-highlight">dom</span></li>
+    <li>ran<span class="dom-highlight">dom</span></li>
+    <li>ran<span class="dom-highlight">dom</span>ize</li>
+    <li>ran<span class="dom-highlight">dom</span>ization</li>
+    <li>ran<span class="dom-highlight">dom</span>ised</li>
+    <li>ran<span class="dom-highlight">dom</span>ized</li>
+    <li>ran<span class="dom-highlight">dom</span>ness</li>
+    <li>ran<span class="dom-highlight">dom</span>ly</li>
+    <li>ran<span class="dom-highlight">dom</span>izers</li>
+    <li>ran<span class="dom-highlight">dom</span>isations</li>
+    <li>pe<span class="dom-highlight">dom</span>eter</li>
+    <li>pe<span class="dom-highlight">dom</span>eters</li>
+    <li>o<span class="dom-highlight">dom</span>eter</li>
+    <li>o<span class="dom-highlight">dom</span>eters</li>
+    <li>spee<span class="dom-highlight">dom</span>eter</li>
+    <li>spee<span class="dom-highlight">dom</span>eters</li>
+    <li>major<span class="dom-highlight">dom</span>o</li>
+    <li>major<span class="dom-highlight">dom</span>os</li>
+    <li>prince<span class="dom-highlight">dom</span></li>
+    <li>prince<span class="dom-highlight">dom</span>s</li>
+    <li>pope<span class="dom-highlight">dom</span></li>
+    <li>pope<span class="dom-highlight">dom</span>s</li>
+    <li><span class="dom-highlight">dom</span>ino</li>
+    <li><span class="dom-highlight">dom</span>inos</li>
   </ul>
 
-  <h2>Scrabble words containing "dom" (cleaned — headings removed, duplicates removed)</h2>
+  <h2>Scrabble words containing "dom"</h2>
   <ul>
-    <!-- Combined, deduplicated list of the Scrabble words containing "dom" -->
-    <li>abdominal</li>
-    <li>abdominally</li>
-    <li>abdomens</li>
-    <li>abdomina</li>
-    <li>abdominals</li>
-    <li>abdomen</li>
-    <li>abdomenizer</li>
-    <li>abdominohysterectomy</li>
-    <li>abdominoplasty</li>
-    <li>abdominohysterectomy</li>
-    <li>abdominohysterectomy</li>
-    <li>abdominohysterectomy</li>
-    <li>abdominohysterectomy</li>
-    <!-- (Note: long lists below — duplicates removed; preserved original words) -->
-    <li>abdominals</li>
-    <li>abdomens</li>
-    <li>abdomina</li>
-    <li>abdominally</li>
-    <li>archdukedom</li>
-    <li>astrodomes</li>
-    <li>astrodome</li>
-    <li>bachelordom</li>
-    <li>beadledom</li>
-    <li>beadledoms</li>
-    <li>beggardom</li>
-    <li>beggardoms</li>
-    <li>bestedom</li>
-    <li>boredom</li>
-    <li>boredoms</li>
-    <li>bossdom</li>
-    <li>bossdoms</li>
-    <li>chefdom</li>
-    <li>chefdoms</li>
-    <li>chiefdom</li>
-    <li>chiefdoms</li>
-    <li>chl</li>
-    <li>clerkdom</li>
-    <li>clerkdoms</li>
-    <li>codominant</li>
-    <li>codominants</li>
-    <li>codominium</li>
-    <li>codominium</li>
-    <li>condom</li>
-    <li>condominium</li>
-    <li>condominiums</li>
-    <li>condoms</li>
-    <li>condominiums</li>
-    <li>condom</li>
-    <li>coupledom</li>
-    <li>coupledoms</li>
-    <li>cuckoldom</li>
-    <li>czardom</li>
-    <li>czardoms</li>
-    <li>domaine</li>
-    <li>domain</li>
-    <li>domaines</li>
-    <li>domains</li>
-    <li>domainkeys</li>
-    <li>domal</li>
-    <li>domal</li>
-    <li>domal</li>
-    <li>domed</li>
-    <li>domes</li>
-    <li>domesday</li>
-    <li>domesdays</li>
-    <li>domet</li>
-    <li>domf</li>
-    <li>domical</li>
-    <li>domical</li>
-    <li>domical</li>
-    <li>domic</li>
-    <li>domicil</li>
-    <li>domicils</li>
-    <li>domicile</li>
-    <li>domiciled</li>
-    <li>domiciles</li>
-    <li>domiciliary</li>
-    <li>domiciliate</li>
-    <li>domiciliation</li>
-    <li>domiciling</li>
-    <li>domiciling</li>
-    <li>domiciled</li>
-    <li>domiciling</li>
-    <li>domiciling</li>
-    <li>domiciling</li>
-    <li>dominate</li>
-    <li>dominated</li>
-    <li>dominates</li>
-    <li>dominating</li>
-    <li>domination</li>
-    <li>dominations</li>
-    <li>dominator</li>
-    <li>dominators</li>
-    <li>dominative</li>
-    <li>dominances</li>
-    <li>dominancy</li>
-    <li>dominant</li>
-    <li>dominants</li>
-    <li>domineer</li>
-    <li>domineered</li>
-    <li>domineers</li>
-    <li>domineering</li>
-    <li>domineeringly</li>
-    <li>dominicks</li>
-    <li>dominicker</li>
-    <li>dominickers</li>
-    <li>dominical</li>
-    <li>dominick</li>
-    <li>dominies</li>
-    <li>dominie</li>
-    <li>domine</li>
-    <li>domines</li>
-    <li>dominiums</li>
-    <li>dominiques</li>
-    <li>dominion</li>
-    <li>dominions</li>
-    <li>domino</li>
-    <li>dominoes</li>
-    <li>dominos</li>
-    <li>doming</li>
-    <li>dodoma</li>
-    <li>dome</li>
-    <li>dombeya</li>
-    <li>dombes</li>
-    <li>dombiratos</li>
-    <li>domboshawa</li>
-    <li>dombresson</li>
-    <li>dombarites</li>
-    <li>dombarovskii</li>
-    <li>dombarovskiy</li>
-    <li>dombang</li>
-    <li>dombec</li>
-    <li>domber</li>
-    <li>domber</li>
-    <li>dombog</li>
-    <li>dombook</li>
-    <li>dombo</li>
-    <li>domed</li>
-    <li>domfira</li>
-    <li>domhash</li>
-    <li>domian</li>
-    <li>domiar</li>
-    <li>domic</li>
-    <li>domical</li>
-    <li>domic</li>
-    <li>domica</li>
-    <li>domid</li>
-    <li>domify</li>
-    <li>domini</li>
-    <li>dominiums</li>
-    <li>dominuses</li>
-    <li>domiot</li>
-    <li>domitia</li>
-    <li>domitiae</li>
-    <li>domitas</li>
-    <li>dommda</li>
-    <li>dommel</li>
-    <li>dommoc</li>
-    <li>domna</li>
-    <li>domnax</li>
-    <li>domnr</li>
-    <li>domoa</li>
-    <li>domo</li>
-    <li>domod</li>
-    <li>domoid</li>
-    <li>domopm</li>
-    <li>domos</li>
-    <li>domp</li>
-    <li>dombur</li>
-    <li>domrep</li>
-    <li>doms</li>
-    <li>domin</li>
-    <li>dominical</li>
-    <li>domirira</li>
-    <li>dompt</li>
-    <li>domra</li>
-    <li>domsiah</li>
-    <li>domsure</li>
-    <li>domtar</li>
-    <li>domuy</li>
-    <li>domenichino</li>
-    <li>domenichino</li>
-    <li>domic</li>
-    <li>domic</li>
-    <li>domonics</li>
-    <li>domomatic</li>
-    <li>dompedo</li>
-    <li>dominate</li>
-    <li>dompt</li>
-    <li>domsar</li>
-    <li>domsat</li>
-    <li>domsav</li>
-    <li>domsel</li>
-    <li>domsiah</li>
-    <li>domst</li>
-    <li>domania</li>
-    <li>domamia</li>
-    <li>domania</li>
-    <li>domani</li>
-    <li>domani</li>
-    <li>domani</li>
-    <li>domant</li>
-    <li>domany</li>
-    <li>domar</li>
-    <li>domark</li>
-    <li>domarlo</li>
-    <li>domart</li>
-    <li>domash</li>
-    <li>domash</li>
-    <li>domash</li>
-    <li>domatia</li>
-    <li>domats</li>
-    <li>domatic</li>
-    <li>domato</li>
-    <li>domaz</li>
-    <li>domaz</li>
-    <li>domazza</li>
-    <li>domber</li>
-    <li>domic</li>
-    <li>domic</li>
-    <li>domic</li>
-    <li>domsect</li>
-    <li>domsic</li>
-    <li>domtle</li>
-    <li>domuze</li>
-    <li>donamid</li>
-    <li>donamid</li>
-    <li>donamid</li>
-    <li>donamic</li>
-    <li>donamic</li>
-    <li>donamic</li>
-    <li>donam</li>
-    <li>doname</li>
-    <li>donance</li>
-    <li>donancy</li>
-    <li>donator</li>
-    <li>donative</li>
-    <li>donators</li>
-    <li>donax</li>
-    <li>donead</li>
-    <li>donear</li>
-    <li>doneat</li>
-    <li>doneate</li>
-    <li>doneer</li>
-    <li>donees</li>
-    <li>doneer</li>
-    <li>doneic</li>
-    <li>doneil</li>
-    <li>doneism</li>
-    <li>doneo</li>
-    <li>doneom</li>
-    <li>doneon</li>
-    <li>doneop</li>
-    <li>doneos</li>
-    <li>doneot</li>
-    <li>doneous</li>
-    <li>doneow</li>
-    <li>donept</li>
-    <li>doneus</li>
-    <li>doneve</li>
-    <li>donevo</li>
-    <li>donevy</li>
-    <li>donex</li>
-    <li>dongdom</li>
-    <li>doniad</li>
-    <li>donime</li>
-    <li>donium</li>
-    <li>donity</li>
-    <li>donive</li>
-    <li>donkor</li>
-    <li>donnan</li>
-    <li>donnes</li>
-    <li>donnik</li>
-    <li>donor</li>
-    <li>donors</li>
-    <li>donos</li>
-    <li>donow</li>
-    <li>donse</li>
-    <li>donta</li>
-    <li>donu</li>
-    <li>donus</li>
-    <li>donux</li>
-    <li>dopdom</li>
-    <li>doream</li>
-    <li>dorem</li>
-    <li>doriad</li>
-    <li>doric</li>
-    <li>doris</li>
-    <li>dormad</li>
-    <li>dormas</li>
-    <li>dormed</li>
-    <li>dormes</li>
-    <li>dormin</li>
-    <li>dormio</li>
-    <li>dormit</li>
-    <li>dorms</li>
-    <li>dorn</li>
-    <li>dorome</li>
-    <li>dotdom</li>
-    <li>dovdom</li>
-    <li>doxdom</li>
-    <li>doxdom</li>
-    <li>dozdom</li>
-    <li>doma</li>
-    <li>domal</li>
-    <li>domase</li>
-    <li>domava</li>
-    <li>domber</li>
-    <li>domkey</li>
-    <li>domo</li>
-    <li>domon</li>
-    <li>doms</li>
-    <li>domus</li>
-    <li>domen</li>
-    <li>domes</li>
-    <li>domps</li>
-    <li>dombas</li>
-    <li>domvil</li>
-    <li>domv</li>
-    <li>domy</li>
-    <li>domyra</li>
-    <li>domyz</li>
-    <li>domz</li>
-    <li>doma</li>
-    <li>doman</li>
-    <li>domant</li>
-    <li>domane</li>
-    <li>domate</li>
-    <li>domate</li>
-    <li>domato</li>
-    <li>domaw</li>
-    <li>domax</li>
-    <li>dombar</li>
-    <li>domed</li>
-    <li>domia</li>
-    <li>domic</li>
-    <li>domiz</li>
-    <li>domoza</li>
-    <li>domviz</li>
-    <li>domz</li>
-    <li>dom's</li>
-    <li>dom</li>
+    <li>ab<span class="dom-highlight">dom</span>inal</li>
+    <li>ab<span class="dom-highlight">dom</span>inally</li>
+    <li>ab<span class="dom-highlight">dom</span>ens</li>
+    <li>ab<span class="dom-highlight">dom</span>ina</li>
+    <li>ab<span class="dom-highlight">dom</span>inals</li>
+    <li>ab<span class="dom-highlight">dom</span>en</li>
+    <li>ab<span class="dom-highlight">dom</span>enizer</li>
+    <li>ab<span class="dom-highlight">dom</span>inohysterectomy</li>
+    <li>ab<span class="dom-highlight">dom</span>inoplasty</li>
+    <li>archduke<span class="dom-highlight">dom</span></li>
+    <li>astro<span class="dom-highlight">dom</span>es</li>
+    <li>astro<span class="dom-highlight">dom</span>e</li>
+    <li>bachelor<span class="dom-highlight">dom</span></li>
+    <li>beadle<span class="dom-highlight">dom</span></li>
+    <li>beadle<span class="dom-highlight">dom</span>s</li>
+    <li>beggar<span class="dom-highlight">dom</span></li>
+    <li>beggar<span class="dom-highlight">dom</span>s</li>
+    <li>beste<span class="dom-highlight">dom</span></li>
+    <li>bore<span class="dom-highlight">dom</span></li>
+    <li>bore<span class="dom-highlight">dom</span>s</li>
+    <li>boss<span class="dom-highlight">dom</span></li>
+    <li>boss<span class="dom-highlight">dom</span>s</li>
+    <li>chef<span class="dom-highlight">dom</span></li>
+    <li>chef<span class="dom-highlight">dom</span>s</li>
+    <li>chief<span class="dom-highlight">dom</span></li>
+    <li>chief<span class="dom-highlight">dom</span>s</li>
+    <li>clerk<span class="dom-highlight">dom</span></li>
+    <li>clerk<span class="dom-highlight">dom</span>s</li>
+    <li>co<span class="dom-highlight">dom</span>inant</li>
+    <li>co<span class="dom-highlight">dom</span>inants</li>
+    <li>co<span class="dom-highlight">dom</span>inium</li>
+    <li>con<span class="dom-highlight">dom</span></li>
+    <li>con<span class="dom-highlight">dom</span>inium</li>
+    <li>con<span class="dom-highlight">dom</span>iniums</li>
+    <li>con<span class="dom-highlight">dom</span>s</li>
+    <li>couple<span class="dom-highlight">dom</span></li>
+    <li>couple<span class="dom-highlight">dom</span>s</li>
+    <li>cuckol<span class="dom-highlight">dom</span></li>
+    <li>czar<span class="dom-highlight">dom</span></li>
+    <li>czar<span class="dom-highlight">dom</span>s</li>
+    <li><span class="dom-highlight">dom</span>aine</li>
+    <li><span class="dom-highlight">dom</span>ain</li>
+    <li><span class="dom-highlight">dom</span>aines</li>
+    <li><span class="dom-highlight">dom</span>ains</li>
+    <li><span class="dom-highlight">dom</span>ainkeys</li>
+    <li><span class="dom-highlight">dom</span>al</li>
+    <li><span class="dom-highlight">dom</span>ed</li>
+    <li><span class="dom-highlight">dom</span>es</li>
+    <li><span class="dom-highlight">dom</span>esday</li>
+    <li><span class="dom-highlight">dom</span>esdays</li>
+    <li><span class="dom-highlight">dom</span>et</li>
+    <li><span class="dom-highlight">dom</span>f</li>
+    <li><span class="dom-highlight">dom</span>ical</li>
+    <li><span class="dom-highlight">dom</span>ic</li>
+    <li><span class="dom-highlight">dom</span>icil</li>
+    <li><span class="dom-highlight">dom</span>icils</li>
+    <li><span class="dom-highlight">dom</span>icile</li>
+    <li><span class="dom-highlight">dom</span>iciled</li>
+    <li><span class="dom-highlight">dom</span>iciles</li>
+    <li><span class="dom-highlight">dom</span>iciliary</li>
+    <li><span class="dom-highlight">dom</span>iciliate</li>
+    <li><span class="dom-highlight">dom</span>iciliation</li>
+    <li><span class="dom-highlight">dom</span>iciling</li>
+    <li><span class="dom-highlight">dom</span>inate</li>
+    <li><span class="dom-highlight">dom</span>inated</li>
+    <li><span class="dom-highlight">dom</span>inates</li>
+    <li><span class="dom-highlight">dom</span>inating</li>
+    <li><span class="dom-highlight">dom</span>ination</li>
+    <li><span class="dom-highlight">dom</span>inations</li>
+    <li><span class="dom-highlight">dom</span>inator</li>
+    <li><span class="dom-highlight">dom</span>inators</li>
+    <li><span class="dom-highlight">dom</span>inative</li>
+    <li><span class="dom-highlight">dom</span>inances</li>
+    <li><span class="dom-highlight">dom</span>inancy</li>
+    <li><span class="dom-highlight">dom</span>inant</li>
+    <li><span class="dom-highlight">dom</span>inants</li>
+    <li><span class="dom-highlight">dom</span>ineer</li>
+    <li><span class="dom-highlight">dom</span>ineered</li>
+    <li><span class="dom-highlight">dom</span>ineers</li>
+    <li><span class="dom-highlight">dom</span>ineering</li>
+    <li><span class="dom-highlight">dom</span>ineeringly</li>
+    <li><span class="dom-highlight">dom</span>inicks</li>
+    <li><span class="dom-highlight">dom</span>inicker</li>
+    <li><span class="dom-highlight">dom</span>inickers</li>
+    <li><span class="dom-highlight">dom</span>inical</li>
+    <li><span class="dom-highlight">dom</span>inick</li>
+    <li><span class="dom-highlight">dom</span>inies</li>
+    <li><span class="dom-highlight">dom</span>inie</li>
+    <li><span class="dom-highlight">dom</span>ine</li>
+    <li><span class="dom-highlight">dom</span>ines</li>
+    <li><span class="dom-highlight">dom</span>iniums</li>
+    <li><span class="dom-highlight">dom</span>iniques</li>
+    <li><span class="dom-highlight">dom</span>inion</li>
+    <li><span class="dom-highlight">dom</span>inions</li>
+    <li><span class="dom-highlight">dom</span>ino</li>
+    <li><span class="dom-highlight">dom</span>inoes</li>
+    <li><span class="dom-highlight">dom</span>inos</li>
+    <li><span class="dom-highlight">dom</span>ing</li>
+    <li><span class="dom-highlight">dom</span>oma</li>
+    <li><span class="dom-highlight">dom</span>e</li>
+    <li><span class="dom-highlight">dom</span>beya</li>
+    <li><span class="dom-highlight">dom</span>bes</li>
+    <li><span class="dom-highlight">dom</span>biratos</li>
+    <li><span class="dom-highlight">dom</span>boshawa</li>
+    <li><span class="dom-highlight">dom</span>bresson</li>
+    <li><span class="dom-highlight">dom</span>barites</li>
+    <li><span class="dom-highlight">dom</span>barovskii</li>
+    <li><span class="dom-highlight">dom</span>barovskiy</li>
+    <li><span class="dom-highlight">dom</span>bang</li>
+    <li><span class="dom-highlight">dom</span>bec</li>
+    <li><span class="dom-highlight">dom</span>ber</li>
+    <li><span class="dom-highlight">dom</span>bog</li>
+    <li><span class="dom-highlight">dom</span>book</li>
+    <li><span class="dom-highlight">dom</span>bo</li>
+    <li><span class="dom-highlight">dom</span>fira</li>
+    <li><span class="dom-highlight">dom</span>hash</li>
+    <li><span class="dom-highlight">dom</span>ian</li>
+    <li><span class="dom-highlight">dom</span>iar</li>
+    <li><span class="dom-highlight">dom</span>ica</li>
+    <li><span class="dom-highlight">dom</span>id</li>
+    <li><span class="dom-highlight">dom</span>ify</li>
+    <li><span class="dom-highlight">dom</span>ini</li>
+    <li><span class="dom-highlight">dom</span>inuses</li>
+    <li><span class="dom-highlight">dom</span>iot</li>
+    <li><span class="dom-highlight">dom</span>itia</li>
+    <li><span class="dom-highlight">dom</span>itiae</li>
+    <li><span class="dom-highlight">dom</span>itas</li>
+    <li><span class="dom-highlight">dom</span>mda</li>
+    <li><span class="dom-highlight">dom</span>mel</li>
+    <li><span class="dom-highlight">dom</span>moc</li>
+    <li><span class="dom-highlight">dom</span>na</li>
+    <li><span class="dom-highlight">dom</span>nax</li>
+    <li><span class="dom-highlight">dom</span>nr</li>
+    <li><span class="dom-highlight">dom</span>oa</li>
+    <li><span class="dom-highlight">dom</span>o</li>
+    <li><span class="dom-highlight">dom</span>od</li>
+    <li><span class="dom-highlight">dom</span>oid</li>
+    <li><span class="dom-highlight">dom</span>opm</li>
+    <li><span class="dom-highlight">dom</span>os</li>
+    <li><span class="dom-highlight">dom</span>p</li>
+    <li><span class="dom-highlight">dom</span>bur</li>
+    <li><span class="dom-highlight">dom</span>rep</li>
+    <li><span class="dom-highlight">dom</span>s</li>
+    <li><span class="dom-highlight">dom</span>in</li>
+    <li><span class="dom-highlight">dom</span>irira</li>
+    <li><span class="dom-highlight">dom</span>pt</li>
+    <li><span class="dom-highlight">dom</span>ra</li>
+    <li><span class="dom-highlight">dom</span>siah</li>
+    <li><span class="dom-highlight">dom</span>sure</li>
+    <li><span class="dom-highlight">dom</span>tar</li>
+    <li><span class="dom-highlight">dom</span>uy</li>
+    <li><span class="dom-highlight">dom</span>enichino</li>
+    <li><span class="dom-highlight">dom</span>onics</li>
+    <li><span class="dom-highlight">dom</span>omatic</li>
+    <li><span class="dom-highlight">dom</span>pedo</li>
+    <li><span class="dom-highlight">dom</span>sar</li>
+    <li><span class="dom-highlight">dom</span>sat</li>
+    <li><span class="dom-highlight">dom</span>sav</li>
+    <li><span class="dom-highlight">dom</span>sel</li>
+    <li><span class="dom-highlight">dom</span>st</li>
+    <li><span class="dom-highlight">dom</span>ania</li>
+    <li><span class="dom-highlight">dom</span>amia</li>
+    <li><span class="dom-highlight">dom</span>ani</li>
+    <li><span class="dom-highlight">dom</span>ant</li>
+    <li><span class="dom-highlight">dom</span>any</li>
+    <li><span class="dom-highlight">dom</span>ar</li>
+    <li><span class="dom-highlight">dom</span>ark</li>
+    <li><span class="dom-highlight">dom</span>arlo</li>
+    <li><span class="dom-highlight">dom</span>art</li>
+    <li><span class="dom-highlight">dom</span>ash</li>
+    <li><span class="dom-highlight">dom</span>atia</li>
+    <li><span class="dom-highlight">dom</span>ats</li>
+    <li><span class="dom-highlight">dom</span>atic</li>
+    <li><span class="dom-highlight">dom</span>ato</li>
+    <li><span class="dom-highlight">dom</span>az</li>
+    <li><span class="dom-highlight">dom</span>azza</li>
+    <li><span class="dom-highlight">dom</span>sect</li>
+    <li><span class="dom-highlight">dom</span>sic</li>
+    <li><span class="dom-highlight">dom</span>tle</li>
+    <li><span class="dom-highlight">dom</span>uze</li>
+    <li>dong<span class="dom-highlight">dom</span></li>
+    <li>dop<span class="dom-highlight">dom</span></li>
+    <li>dot<span class="dom-highlight">dom</span></li>
+    <li>dov<span class="dom-highlight">dom</span></li>
+    <li>dox<span class="dom-highlight">dom</span></li>
+    <li>doz<span class="dom-highlight">dom</span></li>
+    <li><span class="dom-highlight">dom</span>a</li>
+    <li><span class="dom-highlight">dom</span>ase</li>
+    <li><span class="dom-highlight">dom</span>ava</li>
+    <li><span class="dom-highlight">dom</span>key</li>
+    <li><span class="dom-highlight">dom</span>on</li>
+    <li><span class="dom-highlight">dom</span>us</li>
+    <li><span class="dom-highlight">dom</span>en</li>
+    <li><span class="dom-highlight">dom</span>ps</li>
+    <li><span class="dom-highlight">dom</span>bas</li>
+    <li><span class="dom-highlight">dom</span>vil</li>
+    <li><span class="dom-highlight">dom</span>v</li>
+    <li><span class="dom-highlight">dom</span>y</li>
+    <li><span class="dom-highlight">dom</span>yra</li>
+    <li><span class="dom-highlight">dom</span>yz</li>
+    <li><span class="dom-highlight">dom</span>z</li>
+    <li><span class="dom-highlight">dom</span>an</li>
+    <li><span class="dom-highlight">dom</span>ane</li>
+    <li><span class="dom-highlight">dom</span>ate</li>
+    <li><span class="dom-highlight">dom</span>aw</li>
+    <li><span class="dom-highlight">dom</span>ax</li>
+    <li><span class="dom-highlight">dom</span>bar</li>
+    <li><span class="dom-highlight">dom</span>ia</li>
+    <li><span class="dom-highlight">dom</span>iz</li>
+    <li><span class="dom-highlight">dom</span>oza</li>
+    <li><span class="dom-highlight">dom</span>viz</li>
+    <li><span class="dom-highlight">dom</span>'s</li>
+    <li><span class="dom-highlight">dom</span></li>
   </ul>
 
+  <script>
+    // Count total words
+    const allLists = document.querySelectorAll('ul');
+    let total = 0;
+    allLists.forEach(list => {
+      total += list.children.length;
+    });
+    document.getElementById('totalCount').textContent = total;
+  </script>
 </body>
 </html>
